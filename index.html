@@ -28,6 +28,40 @@
         <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
         <![endif]-->
+        <style>
+            .code-compare pre code {
+                max-height: 550px;
+                height: 525px;
+                padding: 0;
+            }
+
+            .code-compare.small {
+                margin: 15px 0;
+            }
+
+            .code-compare.small pre {
+                display: inline-block;
+                width: 48%;
+                vertical-align: top;
+                margin: 0;
+            }
+
+            .code-compare.small pre code {
+                overflow: hidden;
+            }
+
+            .code-compare iframe {
+                display: none;
+                width: 48%;
+                height: 525px;
+                margin: 0;
+            }
+
+            .code-compare iframe.visible {
+                display: inline-block;
+            }
+
+        </style>
     </head>
 
     <body>
@@ -55,13 +89,18 @@
     &lt;/body&gt;
 &lt;/html&gt;</code></pre>
                         <aside class="notes">
-                        Omówienie podstawowych elementów html. Pokazanie jak tagi się zamykaja otwierają.
-                        Pokazanie wymaganych tagów.
+                            <ol>
+                                <li>Omówienie podstawowych elementów html,</li>
+                                <li>pokazanie jak tagi się zamykaja otwierają,</li>
+                                <li>pokazanie wymaganych tagów,</li>
+                                <li>porównanie struktury drzewiastej do folderów.</li>
+                            </ol>
                         </aside>
                     </section>
                     <section>
                         <h2>Domyslny przepływ dokumentu</h2>
-                        <pre style="display: inline-block; width: 48%; vertical-align: top"><code style="max-height:550px;">&lt;!DOCTYPE html&gt;
+                        <div class="code-compare">
+                        <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;Base HTML5 structure&lt;/title&gt;
@@ -84,11 +123,23 @@
     &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-                    <iframe src="iframes/3d.html" style="display: inline-block; width: 48%; height: 525px; margin: 15px auto" scrolling="no"></iframe>
+                    <iframe src="iframes/3d.html" class="fragment" scrolling="no"></iframe>
+                    </div>
+                    <aside class="notes">
+                        <ol>
+                            <li>Wprowadzenie nazwy "box" jako reprezentacji graficznej tagu,</li>
+                            <li>porównanie boxów do warstw w PS,</li>
+                            <li>wstępne omówienie zachowania display block</li>
+                            <li>omówienie standardoewgo przepływu dokumentu.</li>
+                        </ol>
+                    </aside>
                     </section>
                     <section>
                         <h2>Nie do końca 2D</h2>
                         <img src="img/3d.png" />
+                        <aside class="notes">
+                            Rozwinięcie myśli o warstwach
+                        </aside>
                     </section>
                 </section>
 
@@ -118,6 +169,7 @@
 
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
         <script>
 
@@ -142,6 +194,22 @@
                     { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
                 ]
             });
+
+            Reveal.addEventListener( 'fragmentshown', function( event ) {
+                var $el = $(event.fragment);
+                var $parent = $el.parent();
+                if ($parent.hasClass('code-compare')) {
+                    $parent.addClass('small');
+                }
+            } );
+
+            Reveal.addEventListener( 'fragmenthidden', function( event ) {
+                var $el = $(event.fragment);
+                var $parent = $el.parent();
+                if ($parent.hasClass('code-compare')) {
+                    $parent.removeClass('small');
+                }
+            } );
 
         </script>
 
