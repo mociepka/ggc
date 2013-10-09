@@ -16,6 +16,7 @@
 
         <link rel="stylesheet" href="css/reveal.min.css">
         <link rel="stylesheet" href="css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="css/syntax.css">
 
         <!-- For syntax highlighting -->
         <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -29,31 +30,35 @@
         <script src="lib/js/html5shiv.js"></script>
         <![endif]-->
         <style>
-            .code-compare pre code {
+            .code-compare .highlight code {
                 max-height: 550px;
                 height: 525px;
-                padding: 0;
             }
 
             .code-compare.small {
                 margin: 15px 0;
             }
 
-            .code-compare.small pre {
+            .code-compare.small .highlight {
                 display: inline-block;
-                width: 48%;
+                width: 49%;
                 vertical-align: top;
-                margin: 0;
             }
 
-            .code-compare.small pre code {
+            .code-compare.small .highlight pre {
+                margin-top: 0;
+                margin-bottom: 0;
+                width: 100%;
+            }
+
+            .code-compare.small .highlight code {
                 overflow: hidden;
             }
 
             .code-compare iframe {
                 display: none;
-                width: 48%;
-                height: 525px;
+                width: 50%;
+                height: 535px;
                 margin: 0;
             }
 
@@ -99,7 +104,7 @@
                     { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
                     { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    //{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
                     { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
                 ]

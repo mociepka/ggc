@@ -1,15 +1,7 @@
 <section>
     <section>
         <h2>HTML</h2>
-        <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;Base HTML5 structure&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        Hello world!
-    &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+        {% include code/base.html %}
         <aside class="notes">
             <ol>
                 <li>
@@ -30,29 +22,7 @@
     <section>
         <h2>Domyslny przepływ dokumentu</h2>
         <div class="code-compare">
-            <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;Base HTML5 structure&lt;/title&gt;
-        &lt;link rel=&quot;stylesheet&quot; href=&quot;css/3d.css&quot; /&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;header&gt;
-            header
-        &lt;/header&gt;
-        &lt;article&gt;
-            article
-            &lt;section&gt;
-                section
-                &lt;p&gt;paragraph&lt;/p&gt;
-            &lt;/section&gt;
-        &lt;/article&gt;
-        &lt;footer&gt;
-            footer
-        &lt;/footer&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+            {% include code/flow.html %}
             <iframe src="iframes/3d.html" class="fragment" scrolling="no"></iframe>
         </div>
         <aside class="notes">
