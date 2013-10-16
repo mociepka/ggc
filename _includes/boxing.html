@@ -1,7 +1,7 @@
 <section>
     <section>
         <h2>Typy pozycjonowania dokumentu</h2>
-        <ul>
+        <ul class="fragment">
             <li>
                 Domyślny
             </li>
@@ -12,14 +12,73 @@
                 Pozycjonowanie absolutne
             </li>
         </ul>
+        <ul class="fragment">
+            <li>display</li>
+            <li>float</li>
+            <li>position</li>
+        </ul>
         <aside class="notes">
+            Krótkie wprowadzenie do styli. Każdy tag posiada własności opisujące
+            jego wygląd. Własności te nazywane są stylami. Każdy tag posiada podstawowe
+            własności które można nadpisać.
+
+            Właściwościami odpowiedzialnymi za układ tagów są...
+
             Dwa pierwsze są ze sobą powiązane i w praktyce używane są wspólnie.
         </aside>
     </section>
     <section>
         <h2>Domyślny przepływ dokumentu</h2>
+        <h3>Display</h3>
         <ul>
-            <li></li>
+            <li>block</li>
+            <li>inline</li>
+            <li>inline-block</li>
+            <li>list-item</li>
+            <li>table</li>
+            <li>inline-table</li>
+        </ul>
+        <aside class="notes">
+            Opiera się na własności `display`. Pozostałe dwie są nie ustawione.
+            Dla większości tagów własność `display` ustawiona jest na `block`.
+        </aside>
+    </section>
+    <section>
+        <h2>display: block</h2>
+        <div class="code-compare">
+            {% include code/flow.html %}
+            <iframe src="iframes/block.html" scrolling="no" class="fragment"></iframe>
+        </div>
+        <aside class="notes">
+            Poprzedni przykład bazował wyłącznie na elementach typu block.
+            Po usunięciu własności odpowiedzialnych za wielkość boxu widzimy
+            że tagi zajmują całą długość oraz układają się jeden pod drugim.
+            Ich wielkość natomiast związana jest z zawartością.
+        </aside>
+    </section>
+    <section>
+        <h2>Własności display: block</h2>
+        <ul>
+            <li>szerokość równa szerokości rodzica,</li>
+            <li>wysokość w zależności od zawartości,</li>
+            <li>boxy renderowane zawsze pod sobą,</li>
+            <li>wysokość jak i szerokość może zostać zmieniona.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>display: inline</h2>
+        <div class="code-compare">
+            {% include code/inline.html %}
+            <iframe src="iframes/inline.html" scrolling="no" class="fragment"></iframe>
+        </div>
+    </section>
+    <section>
+        <h2>Własności display: inline</h2>
+        <ul>
+            <li>szerokość w zależności od zawartości,</li>
+            <li>wysokość w zależności od zawartości,</li>
+            <li>boxy renderowane od lewej do prawej,</li>
+            <li>wysokość jak i szerokość <strong class="fragment highlight-red">nie</strong> może zostać zmieniona.</li>
         </ul>
     </section>
 </section>
