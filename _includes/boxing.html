@@ -6,7 +6,7 @@
                 Domyślny
             </li>
             <li>
-                Floats
+                Wyrównania
             </li>
             <li>
                 Pozycjonowanie absolutne
@@ -18,6 +18,12 @@
             <li>position</li>
         </ul>
         <aside class="notes">
+            Całe pozycjonowanie dokumentu można porównać do Worda. Czyli intuicyjnie tekst pisany jest z lewej do
+            prawej, gdy linia się skończy przechodzi do nowej. Wstawienie obrazka lub tabelki powoduje że tekst
+            pisany może być pod lub nad. Możemy także ustawić na obrazku wyrównanie gdzie tekst będzie opływał
+            obiekt (float). I ostatnia opcja czyli obiekt inteligentny który możemy ustawić gdzie chcemy (position).
+            Może on zakrywać nasz tekst lub zasłaniać go.
+
             Krótkie wprowadzenie do styli. Każdy tag posiada własności opisujące
             jego wygląd. Własności te nazywane są stylami. Każdy tag posiada podstawowe
             własności które można nadpisać.
@@ -29,11 +35,14 @@
     </section>
     <section>
         <h2>Domyślny przepływ dokumentu</h2>
+
         <h3>Display</h3>
         <ul>
             <li>block</li>
             <li>inline</li>
             <li>inline-block</li>
+            <li>none</li>
+            <li>inherit</li>
             <li>list-item</li>
             <li>table</li>
             <li>inline-table</li>
@@ -45,6 +54,7 @@
     </section>
     <section>
         <h2>display: block</h2>
+
         <div class="code-compare">
             {% include code/flow.html %}
             <iframe src="iframes/block.html" scrolling="no" class="fragment"></iframe>
@@ -62,15 +72,22 @@
             <li>szerokość równa szerokości rodzica,</li>
             <li>wysokość w zależności od zawartości,</li>
             <li>boxy renderowane zawsze pod sobą,</li>
+            <li>białe znaki pomiędzy tagami nie są widoczne,</li>
             <li>wysokość jak i szerokość może zostać zmieniona.</li>
         </ul>
     </section>
     <section>
         <h2>display: inline</h2>
+
         <div class="code-compare">
             {% include code/inline.html %}
             <iframe src="iframes/inline.html" scrolling="no" class="fragment"></iframe>
         </div>
+        <aside class="notes">
+            Wartość ta opisuje liniowe tagi. Tak naprawdę jest to wartość przypisana do tekstu i zachowuje się tak
+            jak tekst w każdym edytorze. Po osiągnięciu końca lini tekst przechodzi do nowej. Ma on swoją interlinię
+            a wielkość jaką zajmuje okraeśla ilość i wielkoćś tekstu.
+        </aside>
     </section>
     <section>
         <h2>Własności display: inline</h2>
@@ -78,7 +95,60 @@
             <li>szerokość w zależności od zawartości,</li>
             <li>wysokość w zależności od zawartości,</li>
             <li>boxy renderowane od lewej do prawej,</li>
+            <li>białe znaki pomiędzy tagami są widoczne,</li>
             <li>wysokość jak i szerokość <strong class="fragment highlight-red">nie</strong> może zostać zmieniona.</li>
         </ul>
+    </section>
+    <section>
+        <h2>display: inline-block</h2>
+
+        <div class="code-compare">
+            {% include code/inline-block.html %}
+            <iframe src="iframes/inline-block.html" scrolling="no" class="fragment"></iframe>
+        </div>
+        <aside class="notes">
+            Połącznie własności inline oraz block. Jest to element liniowy któremu można nadać wysokość i szerokość.
+            Dzięki takim właściwością możemy tworzyć bloki które będą renderowane od lewej do prawej a jak nie starczy
+            im miejsca w jednej lini to "spadną" do drugiej.
+        </aside>
+    </section>
+    <section>
+        <h2>Własności display: inline-block</h2>
+        <ul>
+            <li>szerokość w zależności od zawartości,</li>
+            <li>wysokość w zależności od zawartości,</li>
+            <li>boxy renderowane od lewej do prawej,</li>
+            <li>białe znaki pomiędzy tagami są widoczne,</li>
+            <li>wysokość jak i szerokość może zostać zmieniona.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Wyrównania</h2>
+
+        <h3>Float &amp; clear</h3>
+        <ul>
+            <li>left</li>
+            <li>right</li>
+            <li>none</li>
+            <li>inherit</li>
+            <li class="fragment">both</li>
+        </ul>
+        <aside class="notes">
+            Opiera się na własności `display`. Pozostałe dwie są nie ustawione.
+            Dla większości tagów własność `display` ustawiona jest na `block`.
+        </aside>
+    </section>
+        <section>
+        <h2>float</h2>
+
+        <div class="code-compare">
+            {% include code/float.html %}
+            <iframe src="iframes/float.html" scrolling="no" class="fragment"></iframe>
+        </div>
+        <aside class="notes">
+            Połącznie własności inline oraz block. Jest to element liniowy któremu można nadać wysokość i szerokość.
+            Dzięki takim właściwością możemy tworzyć bloki które będą renderowane od lewej do prawej a jak nie starczy
+            im miejsca w jednej lini to "spadną" do drugiej.
+        </aside>
     </section>
 </section>
