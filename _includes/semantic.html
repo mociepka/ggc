@@ -1,11 +1,44 @@
 <section>
     <section>
         <h2>Semantyczne znaczenie tagów</h2>
-        <aside class="notes">
-            Dwa pierwsze są ze sobą powiązane i w praktyce używane są wspólnie.
-        </aside>
+{% highlight html %}
+<div id="menu_glowne">
+    <div><a href="#o-nas">O nas</a></div>
+    <div><a href="#galeria">Galeria</a></div>
+    <div><a href="#kontakt">Kontakt</a></div>
+</div>
+{% endhighlight %}
+        <div class="fragment">
+{% highlight html %}
+<nav>
+    <ul>
+        <li><a href="#o-nas">O nas</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+</div>
+{% endhighlight %}
+        </div>
     </section>
     <section>
-
+        <h2>Tagi warte uwagi</h2>
+        <ul>
+            <li>header</li>
+            <li>article</li>
+            <li>aside</li>
+            <li>footer</li>
+        </ul>
+        <ul>
+            <li>section</li>
+            <li>nav</li>
+            <li>figure</li>
+            <li>time</li>
+        </ul>
+    </section>
+    <section>
+        <div class="code-compare">
+            {% include code/semantic.html %}
+            <iframe src="iframes/semantic.html" scrolling="no" class="fragment"></iframe>
+        </div>
     </section>
 </section>
