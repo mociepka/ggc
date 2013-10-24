@@ -1,0 +1,74 @@
+<section>
+    <h2>Wyrównania</h2>
+
+    <h3>Float &amp; clear</h3>
+    <ul>
+        <li>left</li>
+        <li>right</li>
+        <li>none</li>
+        <li>inherit</li>
+        <li class="fragment">both</li>
+    </ul>
+    <aside class="notes">
+        Styl ten możemy w uproszczeniu prównać do wyrównania w wordzie. Jest to jeden z najtrudniejszych do
+        zrozumienia styli ponieważ wyciąga element z przepływu dokumentu i oddziaływuje tylko z liniowymi tagami.
+        Na nasze nieszczęście jest on najdzęściej używany. Dodatkowo ustawienie float skutkuje zmianą display na
+        block.
+    </aside>
+</section>
+<section>
+    <h2>float</h2>
+
+    <div class="code-compare">
+        {% include code/bad_float.html %}
+        <iframe src="iframes/bad_float.html" scrolling="no" class="fragment"></iframe>
+    </div>
+    <aside class="notes">
+        Jest to jeden z podstawowych błędów popełnianych przez webdeweloperów. Brak wyczyszczenia floata skutkuje
+        dosyć nienaturalnym zachowaniem. Jak wspominiałem wcześniej float wyciąga naszego boxa z domyślnego
+        przepływu dzięki czemu nasz obrazek staje się blokiem. Jednak wyciągnięcie z przepływu dokumentu skutkuje
+        tym że nie jest on wliczany do wyliczania wielkości boxa rodzica, dlatego obrazek nachodzi na naszą stopkę.
+        Drugie nieprzewidziane zachowanie to oddziaływanie jedynie z liniowymi tagami oraz z innymi floatami.
+
+        Blok stopki w ogóle nie wchodzi w interakcję z floatowanym obiektem jedynie tekst wewnątrz który jest inline
+        został przesunięty właśnie przez obrazek.
+    </aside>
+</section>
+<section>
+    <h2>clear</h2>
+
+    <div class="code-compare">
+        {% include code/float.html %}
+        <iframe src="iframes/float.html" scrolling="no" class="fragment"></iframe>
+    </div>
+    <aside class="notes">
+        Gdy wyrównujemy obrazek do lewej tekst opływa go z prawej strony i vice versa.
+        Nie możemy zapomnieć o powrocie do zwykłego przepływu dokumentu. Nie chcemy aby nasza liniowa zawartość
+        bloku footer także opływała obrazek.
+    </aside>
+</section>
+<section>
+    <h2>Interakcja między floatami</h2>
+
+    <div class="code-compare">
+        {% include code/interaction_float.html %}
+        <iframe src="iframes/interaction_float.html" scrolling="no" class="fragment"></iframe>
+    </div>
+    <aside class="notes">
+    </aside>
+</section>
+<section>
+    <h2>Najczęściej spotykane użycie</h2>
+
+    <div class="code-compare">
+        {% include code/common_float.html %}
+        <iframe src="iframes/common_float.html" scrolling="no" class="fragment"></iframe>
+    </div>
+    <aside class="notes">
+        Jako że styl inline-block działa bez bugów dopiero w IE8 większość deweloperów używa floatow to tworzenia
+        layautów. Wszystkie najbardziej znane frameworki css też ich używają w swoich gridach. Niewątpliwym
+        plusem floatów jest ich blokowa natura, dziękiczemu nie wyświetlane są między nimi białe znaki które
+        potrafią niszczyć wygląd strony. Niestety zawsze musimy pamiętać o powrocie do normalnego przepływu
+        co niejednolrotnie kończy się pustym tagiem z clearem.
+    </aside>
+</section>

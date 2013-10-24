@@ -1,0 +1,149 @@
+<section>
+    <h2>Pozycjonowanie absolutne</h2>
+
+    <h3>Position &amp; top, right, bottom, left &amp; z-index</h3>
+    <ul>
+        <li>static</li>
+        <li>relative</li>
+        <li>absolute</li>
+        <li>fixed</li>
+        <li>inherit</li>
+    </ul>
+    <aside class="notes">
+        <ul>
+            <li>Pozycjowanie absolutne wymaga użycia 3 styli.</li>
+            <li>Dwa z nich wyciągają boxy z przepływu dokumentu fixed, absolute</li>
+            <li>Przy użyciu tych styli możemy ustawić nasz box w dowolnym miejscu na stronie podsjąc odpowiednie
+                koordynaty
+            </li>
+            <li>Wartość auto ustawiana jest dla top, right, left, bottom.</li>
+        </ul>
+    </aside>
+</section>
+<!-- mirumee -->
+<section>
+    <h2>position: fixed</h2>
+
+    <h3>without top, right, bottom, left</h3>
+
+    <div class="code-compare">
+        {% include code/fixed.html %}
+        <iframe src="iframes/fixed.html" scrolling="no" class="fragment"></iframe>
+    </div>
+    <aside class="notes">
+        W tym przykładzie nadaliśmy naszym obrazkom position fixed. jak widać wyjęte one zostaly z przepływu
+        dokumentu, nie wliczają się do wielkości rodzica. Widzimy w tym przykładzie jak działa wartość auto
+        dla styli l,r,b,t. Boxy zostały wyrenderowane w tych samych miejscach gdzie znajdowały by się bez
+        position relative,
+    </aside>
+</section>
+
+<section>
+    <h2>position: fixed</h2>
+
+    <div class="code-compare">
+        {% include code/fixedlt.html %}
+        <iframe src="iframes/fixedlt.html" scrolling="no" class="fragment"></iframe>
+    </div>
+    <aside class="notes">
+        W tym przykładzie nadaliśmy naszym obrazkom position fixed. jak widać wyjęte one zostaly z przepływu
+        dokumentu, nie wliczają się do wielkości rodzica. Jak widzimy nasze obrazki zostały ustawione
+        dokładnie w definiowanych punktach. Widzmy na przykładzie także jak działa sama wartość fixed. Nasze obrazki
+        pozycjonują się względem okna przeglądarki.
+    </aside>
+</section>
+<section>
+    <h2>Własności position: fixed</h2>
+    <ul>
+        <li>wyciąga element z przepływu dokumentu,</li>
+        <li>zmienia display na block,</li>
+        <li>zmienia float na none,</li>
+        <li>element pozycjonuje się względem okna przeglądarki.</li>
+    </ul>
+</section>
+<section>
+    <h2>position: relative</h2>
+
+    <div class="code-compare">
+        {% include code/relative.html %}
+        <iframe src="iframes/relative.html" scrolling="no" class="fragment"></iframe>
+    </div>
+    <aside class="notes">
+        W tym przykładzie nadaliśmy naszym obrazkom position fixed. jak widać wyjęte one zostaly z przepływu
+        dokumentu, nie wliczają się do wielkości rodzica. Widzimy w tym przykładzie jak działa wartość auto
+        dla styli l,r,b,t. Boxy zostały wyrenderowane w tych samych miejscach gdzie znajdowały by się bez
+        position relative,
+    </aside>
+</section>
+<!-- mirumee -->
+<section>
+    <h2>position: relative</h2>
+
+    <h3>with left, right, top, bottom</h3>
+
+    <div class="code-compare">
+        {% include code/relativelt.html %}
+        <iframe src="iframes/relativelt.html" scrolling="no" class="fragment"></iframe>
+    </div>
+    <aside class="notes">
+        W tym przykładzie zmieniliśmy domyślną wartość l, r, t, b. Jak widzimy nasze obrazki zostały ustawione
+        dokładnie w definiowanych punktach. Widzmy na przykładzie także jak działa sama wartość fixed. Nasze obrazki
+        pozycjonują się względem okna przeglądarki.
+    </aside>
+</section>
+
+<section>
+    <h2>Własności position: relative</h2>
+    <ul>
+        <li>nie wyciąga elementu z przepływu dokumentu,</li>
+        <li>nie zmienia display,</li>
+        <li>nie zmienia float,</li>
+        <li>element pozycjonuje się względem samego siebie,</li>
+        <li class="fragment">elementy absolute pozycjonują się względem niego.</li>
+    </ul>
+</section>
+<section>
+    <h2>position: absolute</h2>
+
+    <div class="code-compare">
+        {% include code/absolute.html %}
+        <iframe src="iframes/absolute.html" scrolling="no" class="fragment"></iframe>
+    </div>
+    <aside class="notes">
+        W tym przykładzie zmieniliśmy domyślną wartość l, r, t, b. Jak widzimy nasze obrazki zostały ustawione
+        dokładnie w definiowanych punktach. Widzmy na przykładzie także jak działa sama wartość fixed. Nasze obrazki
+        pozycjonują się względem okna przeglądarki.
+    </aside>
+</section>
+<section>
+    <h2>position: absolute</h2>
+
+    <h3>Najczęste użycie</h3>
+
+    <div class="code-compare">
+        {% include code/common_absolute.html %}
+        <iframe src="iframes/common_absolute.html" scrolling="no" class="fragment"></iframe>
+    </div>
+    <aside class="notes">
+        W tym przykładzie zmieniliśmy domyślną wartość l, r, t, b. Jak widzimy nasze obrazki zostały ustawione
+        dokładnie w definiowanych punktach. Widzmy na przykładzie także jak działa sama wartość fixed. Nasze obrazki
+        pozycjonują się względem okna przeglądarki.
+    </aside>
+</section>
+<section>
+    <h2>Własności position: absolute</h2>
+    <ul>
+        <li>wyciąga element z przepływu dokumentu,</li>
+        <li>zmienia display na block,</li>
+        <li>zmienia float na none,</li>
+        <li>element pozycjonuje się względem najbliższego rodzica ze stylem position: relative.</li>
+    </ul>
+</section>
+<section>
+    <h2>z-index</h2>
+
+    <div class="code-compare">
+        {% include code/z-index.html %}
+        <iframe src="iframes/z-index.html" scrolling="no" class="fragment"></iframe>
+    </div>
+</section>

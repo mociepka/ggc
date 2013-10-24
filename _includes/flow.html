@@ -1,0 +1,42 @@
+<section>
+    <section>
+        <h2>Typy pozycjonowania dokumentu</h2>
+        <ul class="fragment">
+            <li>
+                Domyślny
+            </li>
+            <li>
+                Wyrównania
+            </li>
+            <li>
+                Pozycjonowanie absolutne
+            </li>
+        </ul>
+        <ul class="fragment">
+            <li>display</li>
+            <li>float</li>
+            <li>position</li>
+        </ul>
+        <aside class="notes">
+            Całe pozycjonowanie dokumentu można porównać do Worda. Czyli intuicyjnie tekst pisany jest z lewej do
+            prawej, gdy linia się skończy przechodzi do nowej. Wstawienie obrazka lub tabelki powoduje że tekst
+            pisany może być pod lub nad. Możemy także ustawić na obrazku wyrównanie gdzie tekst będzie opływał
+            obiekt (float). I ostatnia opcja czyli obiekt inteligentny który możemy ustawić gdzie chcemy (position).
+            Może on zakrywać nasz tekst lub zasłaniać go.
+
+            Krótkie wprowadzenie do styli. Każdy tag posiada własności opisujące
+            jego wygląd. Własności te nazywane są stylami. Każdy tag posiada podstawowe
+            własności które można nadpisać.
+
+            Właściwościami odpowiedzialnymi za układ tagów są...
+
+            Dwa pierwsze są ze sobą powiązane i w praktyce używane są wspólnie.
+        </aside>
+    </section>
+    {% include flow/display.html %}
+    {% include flow/floats.html %}
+    {% if mirumee %}
+        {% include flow/tables.html %}
+    {% endif %}
+    {% include flow/absolute.html mirumee=mirumee %}
+</section>

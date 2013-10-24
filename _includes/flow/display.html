@@ -1,0 +1,89 @@
+<section>
+    <h2>Domyślny przepływ dokumentu</h2>
+
+    <h3>Display</h3>
+    <ul>
+        <li>block</li>
+        <li>inline</li>
+        <li>inline-block</li>
+        <li>none</li>
+        <li>inherit</li>
+        <li>list-item</li>
+        <li>table</li>
+        <li>inline-table</li>
+    </ul>
+    <aside class="notes">
+        Opiera się na własności `display`. Pozostałe dwie są nie ustawione.
+        Dla większości tagów własność `display` ustawiona jest na `block`.
+    </aside>
+</section>
+<section>
+    <h2>display: block</h2>
+
+    <div class="code-compare">
+        {% include code/flow.html %}
+        <iframe src="iframes/block.html" scrolling="no" class="fragment"></iframe>
+    </div>
+    <aside class="notes">
+        Poprzedni przykład bazował wyłącznie na elementach typu block.
+        Po usunięciu własności odpowiedzialnych za wielkość boxu widzimy
+        że tagi zajmują całą długość oraz układają się jeden pod drugim.
+        Ich wielkość natomiast związana jest z zawartością.
+    </aside>
+</section>
+<section>
+    <h2>Własności display: block</h2>
+    <ul>
+        <li>szerokość równa szerokości rodzica,</li>
+        <li>wysokość w zależności od zawartości,</li>
+        <li>boxy renderowane zawsze pod sobą,</li>
+        <li>białe znaki pomiędzy tagami nie są widoczne,</li>
+        <li>wysokość jak i szerokość może zostać zmieniona.</li>
+    </ul>
+</section>
+<section>
+    <h2>display: inline</h2>
+
+    <div class="code-compare">
+        {% include code/inline.html %}
+        <iframe src="iframes/inline.html" scrolling="no" class="fragment"></iframe>
+    </div>
+    <aside class="notes">
+        Wartość ta opisuje liniowe tagi. Tak naprawdę jest to wartość przypisana do tekstu i zachowuje się tak
+        jak tekst w każdym edytorze. Po osiągnięciu końca lini tekst przechodzi do nowej. Ma on swoją interlinię
+        a wielkość jaką zajmuje okraeśla ilość i wielkoćś tekstu.
+    </aside>
+</section>
+<section>
+    <h2>Własności display: inline</h2>
+    <ul>
+        <li>szerokość w zależności od zawartości,</li>
+        <li>wysokość w zależności od zawartości,</li>
+        <li>boxy renderowane od lewej do prawej,</li>
+        <li>białe znaki pomiędzy tagami są widoczne,</li>
+        <li>wysokość jak i szerokość <strong class="fragment highlight-red">nie</strong> może zostać zmieniona.</li>
+    </ul>
+</section>
+<section>
+    <h2>display: inline-block</h2>
+
+    <div class="code-compare">
+        {% include code/inline-block.html %}
+        <iframe src="iframes/inline-block.html" scrolling="no" class="fragment"></iframe>
+    </div>
+    <aside class="notes">
+        Połącznie własności inline oraz block. Jest to element liniowy któremu można nadać wysokość i szerokość.
+        Dzięki takim właściwością możemy tworzyć bloki które będą renderowane od lewej do prawej a jak nie starczy
+        im miejsca w jednej lini to "spadną" do drugiej.
+    </aside>
+</section>
+<section>
+    <h2>Własności display: inline-block</h2>
+    <ul>
+        <li>szerokość w zależności od zawartości,</li>
+        <li>wysokość w zależności od zawartości,</li>
+        <li>boxy renderowane od lewej do prawej,</li>
+        <li>białe znaki pomiędzy tagami są widoczne,</li>
+        <li>wysokość jak i szerokość może zostać zmieniona.</li>
+    </ul>
+</section>

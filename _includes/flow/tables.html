@@ -1,0 +1,34 @@
+<section>
+    <h2>Tables</h2>
+    <ul>
+        <li><span class="dl">table</span> { display: table }<span class="fragment">, { display: inline-table }</span>
+        </li>
+        <li><span class="dl">tr</span> { display: table-row }</li>
+        <li><span class="dl">thead</span> { display: table-header-group }</li>
+        <li><span class="dl">tr</span> { display: table-row-group }</li>
+        <li><span class="dl">tfoot</span> { display: table-footer-group }</li>
+        <li><span class="dl">col</span> { display: table-column }</li>
+        <li><span class="dl">colgroup</span> { display: table-column-group }</li>
+        <li><span class="dl">td, th</span> { display: table-cell }</li>
+        <li><span class="dl">caption</span> { display: table-caption }</li>
+    </ul>
+</section>
+<section>
+    <h2>display: table</h2>
+    <ul>
+        <li>table-layout</li>
+        <li class="fragment">empty-cells</li>
+    </ul>
+    <aside class="notes">
+        table-layout: fixed, auto;
+        empty-cells: show, hide
+    </aside>
+</section>
+<section>
+    <h2>display: table-column-group</h2>
+
+    <div class="code-compare">
+        {% include code/colgroup.html %}
+        <iframe src="iframes/colgroup.html" scrolling="no" class="fragment"></iframe>
+    </div>
+</section>
