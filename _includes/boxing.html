@@ -7,8 +7,35 @@
         <h2>box-sizing</h2>
         <ul>
             <li>content-box</li>
-            <li>padding-box</li>
             <li>border-box</li>
+            <li class="fragment">padding-box</li>
         </ul>
+    </section>
+    <section>
+        <h2>content-box</h2>
+        <div class="code-compare">
+            {% include code/boxing.html %}
+            <iframe src="iframes/boxing.html" class="fragment" scrolling="no"></iframe>
+        </div>
+    </section>
+    <section>
+        <h2>border-box</h2>
+        <div class="code-compare">
+            {% include code/border-box.html %}
+            <iframe src="iframes/border-box.html" class="fragment" scrolling="no"></iframe>
+        </div>
+    </section>
+    <section>
+        <h2>problem with border</h2>
+        <div class="code-compare">
+            {% include code/boxing-border.html %}
+            <iframe src="iframes/boxing-border.html" class="fragment" scrolling="no"></iframe>
+        </div>
+    </section>
+    <section>
+        <div class="code-compare">
+            {% include code/boxing-borderf.html %}
+            <iframe src="iframes/boxing-borderf.html" class="fragment" scrolling="no"></iframe>
+        </div>
     </section>
 </section>

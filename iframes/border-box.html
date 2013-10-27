@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Base HTML5 structure</title>
+    <link rel="stylesheet" href="css/boxing.css"/>
+    <style>
+        #boxing {
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            line-height: 110px;
+            padding: 10px;
+            border: 10px solid #fff;
+            background: #000;
+            box-sizing: border-box;
+        }
+
+        #inner {
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+<div id="boxing">
+    <div id="inner"></div>
+</div>
+<script language="JavaScript">
+    var box = document.getElementById('boxing');
+    var inner = document.getElementById('inner');
+    inner.innerText = box.offsetWidth + 'px';
+</script>
+</body>
+</html>
